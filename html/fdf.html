@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title> test </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            #container {
+                text-align: center;
+                width : 500px;
+            }
+            button {
+                width : 50px;
+                height : 50px;
+                border : 2px solid black;
+                margin-top : 10px;
+            }
+        </style>
+      <script>
+         $(function(){
+                var pass1 = false;
+                var pass2 = false;
+                var pass3 = false;
+                var pass4 = false;
+                // 각 비밀번호를 체크하기 위한 변수
+
+            
+                $("button").click(function(e){
+                    var x = this.id;    //누른 버튼의 아이디체크
+                    //alert(this.id);
+                    function wrong(){   //잘못된 버튼일 경우 변수 초기화하는 함수
+                        pass1 = false;
+                        pass2 = false;
+                        pass3 = false;
+                        pass4 = false;
+                        alert("틀렸습니다!!.");
+                    }
+
+                    if( pass1 == false){ // 처음 누른 비밀번호
+                        if( x == "btn2"){    //누른 버튼을 체크한다2번
+                            pass1 = true;   //1번 비밀번호 체크
+                            alert("정답1");
+                            return;
+                        }
+                        else {
+                            wrong();    // 변수초기화할 필요는 없으나 혹시모를 버그방지
+                        }
+                    }
+                    if( (pass1 == true) && (pass2 == false)){  // 두번째로 누르는 비밀번호
+                        if( x == "btn5"){    
+                            pass2 = true;
+                            alert("정답2");
+                            return;
+                        }
+                        else {
+                            wrong();
+                        }
+                    }
+                    if( (pass1 == true) && (pass2 == true) && ( pass3 == false)){    //세번째로 누르는 비밀번호
+                        if ( x == "btn4"){
+                            pass3 = true;
+                            alert("정답3");
+                            return;
+                        }
+                        else {
+                            wrong();
+                        }
+                    }
+                    if( (pass1==true) && (pass2==true) && (pass3==true)){
+                        if( x == "btn8"){
+                            pass4 = true;
+                            alert("정답4");
+                        }
+                        else {
+                            wrong();
+                        }
+                    }
+                    if (pass4 = true){
+                            $("#container").css("backgroundColor","red");
+                    }
+                });
+         });
+      </script>
+   </head>
+   <body>
+        <div id="container">
+            <button id="btn1"> 1번 </button>
+            <button id="btn2"> 2번 </button>
+            <button id="btn3"> 3번 </button>
+            <br>
+            <button id="btn4"> 4번 </button>
+            <button id="btn5"> 5번 </button>
+            <button id="btn6"> 6번 </button>
+            <br>
+            <button id="btn7"> 7번 </button>
+            <button id="btn8"> 8번 </button>
+            <button id="btn9"> 9번 </button>
+            <br>
+            <button id="btn0"> 0번 </button>
+        </div>
+   </body>
+</html>

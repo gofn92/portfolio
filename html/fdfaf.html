@@ -1,0 +1,55 @@
+
+<!DOCTYPE>
+<html>
+<head>
+<title>new document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+tr.on {
+    background-color: pink;
+}
+</style>
+</head>
+<body>
+ 
+    <script type="text/javascript">
+        function focuss(obj) {
+            var i;
+            var tabNum = obj.parentNode.children.length; //부모의 자식수. 즉, tbody의 tr의 갯수를 리턴합니다.
+ 
+            for (i = 0; i < tabNum; i++)
+                obj.parentNode.children[i].className = ''; 
+            obj.className = 'on'; //obj에는 클릭한 tr의 정보가 넘어옵니다.
+        }
+    </script>
+ 
+ 
+    <table border="1">
+        <thead>
+            <tr>
+                <th>포켓</th>
+                <th>몬스터</th>
+            </tr>
+        </thead>
+ 
+        <tbody>
+            <tr onclick="focuss(this)">
+                <td>피카츄</td>
+                <td>라이츄</td>
+            </tr>
+            <tr onclick="focuss(this)">
+                <td>파이리</td>
+                <td>꼬북이</td>
+            </tr>
+            <tr onclick="focuss(this)">
+                <td>버터플</td>
+                <td>야도란</td>
+            </tr>
+        </tbody>
+ 
+    </table>
+ 
+ 
+ 
+</body>
+</html>

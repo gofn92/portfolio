@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doorlock</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            let pass1 = false;
+            let pass2 = false;
+            let pass3 = false;
+            let pass4 = false;
+
+            $("td").click(function(e){
+                $(this).css("color","green");
+                let x = this.id;
+                // alert(this.id);
+                function wrong(){
+                    pass1 = false;
+                    pass2 = false;
+                    pass3 = false;
+                    pass4 = false;
+                    alert("땡");
+                    $("td").css("color","rgba(255,255,255,0.1)");
+                }
+
+                if( pass1 == false){ // 처음 누른 비밀번호
+                        if( x == "td11"){    //누른 버튼을 체크한다2번
+                            pass1 = true;   //1번 비밀번호 체크
+                            // alert("정답1");
+                            return;
+                        }
+                        else {
+                            wrong();    // 변수초기화할 필요는 없으나 혹시모를 버그방지
+                        }
+                    }
+                    if( (pass1 == true) && (pass2 == false)){  // 두번째로 누르는 비밀번호
+                        if( x == "td9"){    
+                            pass2 = true;
+                            // alert("정답2");
+                            return;
+                        }
+                        else {
+                            wrong();
+                        }
+                    }
+                    if( (pass1 == true) && (pass2 == true) && ( pass3 == false)){    //세번째로 누르는 비밀번호
+                        if ( x == "td1"){
+                            pass3 = true;
+                            // alert("정답3");
+                            return;
+                        }
+                        else {
+                            wrong();
+                        }
+                    }
+                    if( (pass1==true) && (pass2==true) && (pass3==true)){
+                        if( x == "td8"){
+                            pass4 = true;
+                            alert("띠리링");
+                        }
+                        else {
+                            wrong();
+                        }
+                    }
+                    if (pass4 == true){
+                        $(".doorlock").css("display","none");
+                        return false;
+                    }
+            });
+        });
+    </script>
+    <style>
+        html,body{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom right ,#633e3e 0%,#f1f1d6 100%);
+        }
+        .doorlock{
+            width: 300px; height: 600px;
+            border: 10px solid gray;
+            border-radius: 50px;
+            /* box-shadow: 5px 5px 5px 10px gray; */
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            background: #222;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .deco{
+            width: 100%; height: 100px;
+            border-top: 3px solid rgba(255,255,255,0);
+            border-bottom: 3px solid rgba(255,255,255,0);
+            position: absolute;
+            top: 70%;
+            transition: 0.5s;
+        }
+        .circle{
+            width: 80px; height: 80px;
+            border: 1px solid rgba(255,255,255,0);
+            border-radius: 50%;
+            position: absolute;
+            top: 66%; left: 50%;
+            transform: translate(-50%,-70%);
+            transition: 0.5s;
+        }
+        table{
+            width: 300px; height: 400px;
+            border: none;
+            color: rgba(255,255,255,0);
+            position: relative;
+            top: 35%; left: 52%;
+            transform: translate(-50%,-50%);
+            font-size: 2.5rem;
+            letter-spacing: 20px;
+            text-align: center;
+            transition: 0.5s;
+        }
+        .doorlock:hover > table{
+            color: rgba(255,255,255,1);
+        }
+        .doorlock:hover > .deco{
+            border-top: 1px solid rgba(255,255,255,1);
+            border-bottom: 1px solid rgba(255,255,255,1);
+            background: gray;
+        }
+        .doorlock:hover > .deco > .circle{
+            border: 1px solid rgba(255,255,255,1);
+            background: #222;
+        }
+        .doorlock:hover > p{
+            color: #888;
+        }
+        /* tr{
+            width: 100px; height: 100px;
+        } */
+        td{
+            width: 100px; height: 100px;
+            color: rgba(255,255,255,0.1);
+            /* background: rgba(255,255,255,0.1); */
+        }
+        p{
+            position: absolute;
+            top: 90%; left: 50%;
+            transform: translateX(-55%);
+            color: rgba(255,255,255,0);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="doorlock"> 
+        <table id="table">
+            <tr>
+                <td id="td1">1</td>
+                <td id="td2">2</td>
+                <td id="td3">3</td>
+            </tr>
+            <tr>
+                <td id="td4">4</td>
+                <td id="td5">5</td>
+                <td id="td6">6</td>
+            </tr>
+            <tr>
+                <td id="td7">7</td>
+                <td id="td8">8</td>
+                <td id="td9">9</td>
+            </tr>
+            <tr>
+                <td id="td10">*</td>
+                <td id="td11">0</td>
+                <td id="td12">#</td>
+            </tr>
+        </table>
+        <div class="deco">
+            <div class="circle">
+            </div>
+        </div>
+        <p>password : 0918</p>
+    </div>
+</body>
+</html>
