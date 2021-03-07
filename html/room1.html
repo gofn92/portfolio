@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>room1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         *{
             margin: 0;
@@ -32,10 +33,43 @@
             background: black;
             position: absolute;
             left: 685px; top: 272px;
+            z-index: 999;
         }
         .moniter:hover{
             background: rgba(255,255,255,0.5);
             box-shadow: 0 0 200px white;
+        }
+        .hidden2{
+            transform-origin: 0 0;
+            transform: scale(0);
+            transition: all 1s;
+        }
+        .sup{
+            width: 900px; height: 800px;
+            background: rgba(255,255,255,0.5);
+            position: absolute;
+            top: 60px; left: 480px;
+            transform: scale(1);
+        }
+        .hidden2 .colse-btn{
+            width: 30px; height: 30px;
+        }
+        .hidden2 span{
+            position: absolute;
+            right: 0; top: 0px;
+            width: 30px; height: 6px;
+            background: black;
+            cursor: pointer;
+        }
+        .hidden2 span:nth-child(1){
+            position: absolute;
+            top: 10px; right: 0;
+            transform: rotate(45deg);
+        }
+        .hidden2 span:nth-child(2){
+            position: absolute;
+            top: 10px; right: 0;
+            transform: rotate(-45deg);
         }
     </style>
 </head>
@@ -48,8 +82,26 @@
             <div class="desktop">
                 <img src="../image/4_objects.png" alt="">
             </div>
-            <div class="moniter"></div>
+            <div class="moniter">
+            </div>
+            <div class="hidden2">
+                <div class="colse-btn">
+                    <span class="colse"></span>
+                    <span class="close"></span>
+                </div>
+            </div>
         </div>
     </section>
+
+    <script>
+        $(function(){
+            $('.moniter').click(function(){
+                $('.hidden2').addClass('sup');
+            });
+            $('.colse-btn').click(function(){
+                $('.hidden2').removeClass('sup');
+            });
+        });
+    </script>
 </body>
 </html>

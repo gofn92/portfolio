@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100vh; width: 100%;
+            background:#000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        #door{
+            width: 100%; height: 100%;
+        }
+        .con{
+            height: 100%; width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .door{
+            height: 100%; width: 100%;
+            animation: aa 2s both;   
+            background: url(image/bb.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .doorLock1{
+            width: 20px; height: 40px;
+            background: white;
+            position: absolute;
+            left: 46%; top: 35%;
+            border-radius: 30px;
+            animation: bb 1s infinite 2s;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        @keyframes aa{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes bb{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        .hidden{
+            width: 800px; height: 800px;
+            position: absolute;
+            right: 29%; top: 10%;
+            visibility: hidden;
+        }
+
+
+        .doorlock{
+            width: 300px; height: 600px;
+            border: 10px solid gray;
+            border-radius: 50px;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            background: #222;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .deco{
+            width: 100%; height: 100px;
+            border-top: 3px solid rgba(255,255,255,0);
+            border-bottom: 3px solid rgba(255,255,255,0);
+            position: absolute;
+            top: 70%;
+            transition: 0.5s;
+        }
+        .circle{
+            width: 80px; height: 80px;
+            border: 1px solid rgba(255,255,255,0);
+            border-radius: 50%;
+            position: absolute;
+            top: 66%; left: 50%;
+            transform: translate(-50%,-70%);
+            transition: 0.5s;
+        }
+        table{
+            width: 300px; height: 400px;
+            border: none;
+            color: rgba(255,255,255,0);
+            position: relative;
+            top: 35%; left: 52%;
+            transform: translate(-50%,-50%);
+            font-size: 2.5rem;
+            letter-spacing: 20px;
+            text-align: center;
+            transition: 0.5s;
+        }
+        .doorlock:hover > table{
+            color: rgba(255,255,255,1);
+        }
+        .doorlock:hover > .deco{
+            border-top: 1px solid rgba(255,255,255,1);
+            border-bottom: 1px solid rgba(255,255,255,1);
+            background: gray;
+        }
+        .doorlock:hover > .deco > .circle{
+            border: 1px solid rgba(255,255,255,1);
+            background: #222;
+        }
+        .doorlock:hover > p{
+            color: #888;
+        }
+        td{
+            width: 100px; height: 100px;
+            color: rgba(255,255,255,0.1);
+        }
+        p{
+            position: absolute;
+            top: 90%; left: 50%;
+            transform: translateX(-55%);
+            color: rgba(255,255,255,0);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <section id="door">
+        <div class="con">
+            <div class="door">
+            </div>
+            <div class="doorLock1">
+            </div>
+        </div>
+        <div class="hidden">
+            <div class="doorlock"> 
+                <table id="table">
+                    <tr>
+                        <td id="td1">1</td>
+                        <td id="td2">2</td>
+                        <td id="td3">3</td>
+                    </tr>
+                    <tr>
+                        <td id="td4">4</td>
+                        <td id="td5">5</td>
+                        <td id="td6">6</td>
+                    </tr>
+                    <tr>
+                        <td id="td7">7</td>
+                        <td id="td8">8</td>
+                        <td id="td9">9</td>
+                    </tr>
+                    <tr>
+                        <td id="td10">*</td>
+                        <td id="td11">0</td>
+                        <td id="td12">#</td>
+                    </tr>
+                </table>
+                <div class="deco">
+                    <div class="circle">
+                    </div>
+                </div>
+                <p>password : 0918</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
