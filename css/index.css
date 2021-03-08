@@ -1,0 +1,366 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%; height: 100%;
+    /* background: black; */
+    overflow: hidden;
+    color: white;
+    cursor: url(../image/Search\ icon\ 2.png),auto;
+    position: relative;
+}
+.con1{
+    width: 100%; height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    background: black;
+    z-index: 999999999999;
+}
+.con1 h1{
+    position: absolute;
+    top: 100px;
+    font-size: 50px;
+}
+.exp{
+    width: 500px; height: 500px;
+    position: absolute;
+    top: 300px;
+    text-align: justify;
+}
+.exp .ex-txt h2{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.exp .ex-txt ol{
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+    font-style: italic;
+}
+.start{
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 32px;
+    border-radius: 20px;
+    background: transparent;
+    color: white;
+    outline: 0;
+    position: absolute;
+    top: 300px; left: 180px;
+    cursor: url(/image/alert11.png),auto;
+}
+.start:hover{
+    box-shadow: 0 0 100px white;
+}
+/* ------------------------------------------------------------- */
+#door{
+    width: 100%; height: 100%;
+    background: url(../image/bb.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.con5{
+    height: 100%; width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.door{
+    height: 100%; width: 100%;
+    /* animation: aa 2s both;    */
+}
+.doorLock2{
+    width: 20px; height: 40px;
+    background: white;
+    position: absolute;
+    left: 46%; top: 35%;
+    border-radius: 30px;
+    animation: bb 1s infinite 2s;
+    opacity: 0;
+    cursor: url(../image/alert11.png),auto;
+}
+
+@keyframes aa{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes bb{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.hidden{
+    width: 100%; height: 100%;
+    position: absolute;
+    left: 20px; top: 1050px;
+    display: none;
+}
+
+.gg{
+    display: block;
+}
+
+.hidden .doorlock{
+    width: 300px; height: 600px;
+    border: 10px solid gray;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    background: #222;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1s;
+}
+.hidden .deco{
+    width: 100%; height: 100px;
+    border-top: 3px solid rgba(255,255,255,0);
+    border-bottom: 3px solid rgba(255,255,255,0);
+    position: absolute;
+    top: 70%;
+    transition: 0.5s;
+}
+.hidden .circle{
+    width: 80px; height: 80px;
+    border: 1px solid rgba(255,255,255,0);
+    border-radius: 50%;
+    position: absolute;
+    top: 66%; left: 50%;
+    transform: translate(-50%,-70%);
+    transition: 0.5s;
+}
+.hidden table{
+    width: 300px; height: 400px;
+    border: none;
+    color: rgba(255,255,255,0);
+    position: relative;
+    top: 35%; left: 52%;
+    transform: translate(-50%,-50%);
+    font-size: 2.5rem;
+    letter-spacing: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+.hidden .doorlock:hover > table{
+    color: rgba(255,255,255,1);
+}
+.hidden .doorlock:hover > .deco{
+    border-top: 1px solid rgba(255,255,255,1);
+    border-bottom: 1px solid rgba(255,255,255,1);
+    background: gray;
+}
+.hidden .doorlock:hover > .deco > .circle{
+    border: 1px solid rgba(255,255,255,1);
+    background: #222;
+}
+.hidden .doorlock:hover > p{
+    color: #888;
+}
+.hidden td{
+    width: 100px; height: 100px;
+    color: rgba(255,255,255,0.1);
+}
+.hidden p{
+    position: absolute;
+    top: 90%; left: 50%;
+    transform: translateX(-55%);
+    color: rgba(255,255,255,0);
+    transition: 0.5s;
+}
+/* ------------------------------------------------------------ */
+.con2{
+    width: 100%; height: 100%;
+    background: black;
+    position: relative;
+}
+
+.desktop{
+    position: absolute;
+    left: 500px; top: 150px;
+    cursor: url(/image/question2.png),auto;
+}
+.moniter{
+    width: 280px; height: 180px;
+    border: 1px solid white;
+    background: black;
+    position: absolute;
+    left: 685px; top: 272px;
+    z-index: 999;
+}
+.moniter:hover{
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 200px white;
+    cursor: url(/image/alert11.png),auto;
+}
+.hidden2, .hidden3, .hidden4, .hidden5{
+    transform-origin: 0 0;
+    transform: scale(0);
+    transition: all 1s;
+}
+.sup{
+    width: 900px; height: 800px;
+    background: rgba(255,255,255,0.5);
+    position: absolute;
+    top: 60px; left: 480px;
+    transform: scale(1);
+}
+.close-btn{
+    width: 50px; height: 50px;
+}
+.close{
+    position: absolute;
+    right: 0; top: 0px;
+    width: 40px; height: 8px;
+    background: black;
+    cursor: url(/image/alert11.png),auto;
+}
+.close:nth-child(1){
+    position: absolute;
+    top: 10px; right: 0;
+    transform: rotate(45deg);
+}
+.close:nth-child(2){
+    position: absolute;
+    top: 10px; right: 0;
+    transform: rotate(-45deg);
+}
+
+/* ------------------------------------------------------------- */
+.con3{
+    width: 100%; height: 100%;
+    position: relative;
+}
+#room2{
+    width: 100%; height: 100%;
+    background: black;
+    position: relative;
+}
+.kitchen{
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 175px; left: 35%;    
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    cursor: url(/image/question2.png),auto;
+}
+.coffee{
+    width: 170px; height: 180px;
+    position: absolute;
+    top: 440px; right: 640px;
+    cursor: url(/image/alert11.png),auto;
+}
+.refe{
+    width: 410px; height: 550px;
+    position: absolute;
+    top: 250px; right: 110px;
+    cursor: url(/image/alert11.png),auto;
+}
+/* ------------------------------------------------------------- */
+.con4{
+    width: 100%; height: 100%;
+    position: relative;
+    background: black;
+}
+.sofa{
+    position: absolute;
+    bottom: 200px; right: 0;
+    /* transform: translate(-40px) rotate(-5deg) scale(1.2); */
+    transform: skew(20deg) translate(-55px);
+    cursor: url(/image/question2.png),auto;
+}
+.windows{
+    position: absolute;
+    top: 50px; left: 700px;
+    cursor: url(/image/question2.png),auto;
+}
+.tv{
+    position: absolute;
+    top: 200px;
+    transform: translateX(100px) rotateY(20deg); 
+    cursor: url(/image/question2.png),auto;
+}
+.tvLig{
+    border: 1px solid white;
+    width: 200px; height: 320px;
+    position: absolute;
+    top: 380px; left: 100px;
+    transform-origin: 100%,100%;
+    transform: skewY(-35deg) translate(95px); 
+}
+.tvLig:hover{
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 200px white;
+    cursor: url(/image/question2.png),auto;
+}
+.man{
+    position: absolute;
+    top: 50%; left: 40%;
+    cursor: url(/image/alert11.png),auto;
+    z-index: 999;
+}
+/* ---------------------------------------------------- */
+.con6{
+    width: 100%; height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    background: black;
+}
+.con6 h1{
+    position: absolute;
+    top: 100px;
+    font-size: 50px;
+}
+.exp1{
+    width: 500px; height: 500px;
+    position: absolute;
+    top: 300px;
+    text-align: justify;
+}
+.exp1 .ex-txt h2{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+.exp1 .ex-txt ol{
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+    font-style: italic;
+}
+.retry{
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 32px;
+    border-radius: 20px;
+    background: transparent;
+    color: white;
+    outline: 0;
+    position: absolute;
+    top: 300px; left: 180px;
+    cursor: url(/image/alert11.png),auto;
+}
+.retry:hover{
+    box-shadow: 0 0 100px white;
+}

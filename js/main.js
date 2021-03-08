@@ -1,5 +1,6 @@
 'use strict';
 
+//도어락 제어 
 $(function(){
     let pass1 = false;
     let pass2 = false;
@@ -17,6 +18,7 @@ $(function(){
             pass4 = false;
             alert("땡");
             $("td").css("color","rgba(255,255,255,0.1)");
+            //비밀번호 틀렸을때 사용할 함수
         }
 
         
@@ -64,20 +66,46 @@ $(function(){
             return false;
         }
     });
-});
 
 
-$(function(){
-    $('.doorLock1').click(function(){
-    
-        $('.hidden').css(
-            "visibility","visible"
-        );
-        
+    //숨어있는 도어락 나타내기
+    $('.doorLock2').click(function(){
+        $('.hidden').addClass('gg');
+    });
+
+    $('.deco').click(function(){
+        $('.hidden').removeClass('gg');
+    });
+
+
+
+
+//팝업창 띄우기
+    $('.moniter').click(function(){
+        $('.hidden2').addClass('sup');
+    });
+    $('.close-btn').click(function(){
+        $('.hidden2').removeClass('sup');
+    });
+
+    $('.coffee').click(function(){
+        $('.hidden3').addClass('sup');
+    });
+    $('.close-btn').click(function(){
+        $('.hidden3').removeClass('sup');
+    });
+
+    $('.refe').click(function(){
+        $('.hidden4').addClass('sup');
+    });
+    $('.close-btn').click(function(){
+        $('.hidden4').removeClass('sup');
+    });
+
+    $('.man').click(function(){
+        $('.hidden5').addClass('sup');
+    });
+    $('.close-btn').click(function(){
+        $('.hidden5').removeClass('sup');
     });
 });
-
-
-
-
-
