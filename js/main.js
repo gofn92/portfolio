@@ -107,5 +107,5 @@ $(function(){
     });
     $('.close-btn').click(function(){
         $('.hidden5').removeClass('sup');
-    });
+    });    
 });

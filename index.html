@@ -30,6 +30,15 @@
     </section>
     <section id="door">
         <div class="con5">
+            <nav class="navmenu">
+                <ul>
+                    <li><a href="#tuto" class="active"></a></li>
+                    <li><a href="#room1"></a></li>
+                    <li><a href="#room2"></a></li>
+                    <li><a href="#room3"></a></li>
+                    <li><a href="#end"></a></li>
+                </ul>
+            </nav>
             <div class="door">
             </div>
             <div class="doorLock2">
@@ -70,6 +79,15 @@
     </section>
     <section id="room1">
         <div class="con2">
+            <nav class="navmenu">
+                <ul>
+                    <li><a href="#tuto" class="active"></a></li>
+                    <li><a href="#door"></a></li>
+                    <li><a href="#room2"></a></li>
+                    <li><a href="#room3"></a></li>
+                    <li><a href="#end"></a></li>
+                </ul>
+            </nav>
             <div class="room-neunte">
                 <img src="image/Artboard.png" alt="">
             </div>
@@ -88,6 +106,15 @@
     </section>
     <section id="room2">
         <div class="con3">
+            <nav class="navmenu">
+                <ul>
+                    <li><a href="#tuto" class="active"></a></li>
+                    <li><a href="#door"></a></li>
+                    <li><a href="#room1"></a></li>
+                    <li><a href="#room3"></a></li>
+                    <li><a href="#end"></a></li>
+                </ul>
+            </nav>
             <div class="bg">
                 <img src="image/Artboard1.png" alt="">
             </div>
@@ -112,6 +139,15 @@
     </section>
     <section id="room3">
         <div class="con4">
+            <nav class="navmenu">
+                <ul>
+                    <li><a href="#tuto" class="active"></a></li>
+                    <li><a href="#door"></a></li>
+                    <li><a href="#room1"></a></li>
+                    <li><a href="#room2"></a></li>
+                    <li><a href="#end"></a></li>
+                </ul>
+            </nav>
             <div class="bg2">
                 <img src="image/Artboard2.png" alt="">
             </div>
@@ -138,6 +174,15 @@
     </section>
     <section id="end">
         <div class="con6">
+            <nav class="navmenu">
+                <ul>
+                    <li><a href="#tuto" class="active"></a></li>
+                    <li><a href="#door"></a></li>
+                    <li><a href="#room1"></a></li>
+                    <li><a href="#room2"></a></li>
+                    <li><a href="#room3"></a></li>
+                </ul>
+            </nav>
             <h1>End Area</h1>
             <img src="image/Artboard.png" alt="">
             <div class="exp1">
@@ -151,5 +196,21 @@
             </div>
         </div>
     </section>
+
+    <script>
+        //페이지내 이동용 네비게이션메뉴
+    const allItems = document.querySelectorAll(".navmenu ul li a");
+
+    allItems.forEach(item => {
+        item.addEventListener("click",function(e){
+            //remove class
+            for(let i = 0; i < allItems.length; i++){
+                allItems[i].classList.remove("active");
+            };
+            //add class
+            this.classList.add("active");
+        });
+    });
+    </script>
 </body>
 </html>
