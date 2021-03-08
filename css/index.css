@@ -8,7 +8,7 @@
 html,body{
     width: 100%; height: 100%;
     /* background: black; */
-    overflow: hidden;
+    /* overflow: hidden; */
     color: white;
     cursor: url(../image/Search\ icon\ 2.png),auto;
     position: relative;
@@ -54,7 +54,7 @@ html,body{
     outline: 0;
     position: absolute;
     top: 300px; left: 180px;
-    cursor: url(/image/alert11.png),auto;
+    cursor: url(../image/alert11.png),auto;
 }
 .start:hover{
     box-shadow: 0 0 100px white;
@@ -196,7 +196,7 @@ html,body{
 .desktop{
     position: absolute;
     left: 500px; top: 150px;
-    cursor: url(/image/question2.png),auto;
+    cursor: url(../image/question2.png),auto;
 }
 .moniter{
     width: 280px; height: 180px;
@@ -204,12 +204,11 @@ html,body{
     background: black;
     position: absolute;
     left: 685px; top: 272px;
-    z-index: 999;
 }
 .moniter:hover{
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 200px white;
-    cursor: url(/image/alert11.png),auto;
+    cursor: url(../image/alert11.png),auto;
 }
 .hidden2, .hidden3, .hidden4, .hidden5{
     transform-origin: 0 0;
@@ -225,24 +224,28 @@ html,body{
 }
 .close-btn{
     width: 50px; height: 50px;
-}
-.close{
+    /* background: red; */
     position: absolute;
-    right: 0; top: 0px;
+    right: 0;
+    cursor: pointer;
+}
+.close-btn .close{
     width: 40px; height: 8px;
     background: black;
-    cursor: url(/image/alert11.png),auto;
-}
-.close:nth-child(1){
     position: absolute;
-    top: 10px; right: 0;
+    top: 0; right: 0;
+}
+.close-btn .close:nth-child(1){
+    position: absolute;
+    top: 10px;
     transform: rotate(45deg);
 }
-.close:nth-child(2){
+.close-btn .close:nth-child(2){
     position: absolute;
-    top: 10px; right: 0;
+    top: 10px;
     transform: rotate(-45deg);
 }
+
 
 /* ------------------------------------------------------------- */
 .con3{
@@ -260,19 +263,19 @@ html,body{
     top: 175px; left: 35%;    
     perspective: 1000px;
     transform-style: preserve-3d;
-    cursor: url(/image/question2.png),auto;
+    cursor: url(../image/question2.png),auto;
 }
 .coffee{
     width: 170px; height: 180px;
     position: absolute;
     top: 440px; right: 640px;
-    cursor: url(/image/alert11.png),auto;
+    cursor: url(../image/alert11.png),auto;
 }
 .refe{
     width: 410px; height: 550px;
     position: absolute;
     top: 250px; right: 110px;
-    cursor: url(/image/alert11.png),auto;
+    cursor: url(../image/alert11.png),auto;
 }
 /* ------------------------------------------------------------- */
 .con4{
@@ -285,18 +288,18 @@ html,body{
     bottom: 200px; right: 0;
     /* transform: translate(-40px) rotate(-5deg) scale(1.2); */
     transform: skew(20deg) translate(-55px);
-    cursor: url(/image/question2.png),auto;
+    cursor: url(../image/question2.png),auto;
 }
 .windows{
     position: absolute;
     top: 50px; left: 700px;
-    cursor: url(/image/question2.png),auto;
+    cursor: url(../image/question2.png),auto;
 }
 .tv{
     position: absolute;
     top: 200px;
     transform: translateX(100px) rotateY(20deg); 
-    cursor: url(/image/question2.png),auto;
+    cursor: url(../image/question2.png),auto;
 }
 .tvLig{
     border: 1px solid white;
@@ -309,12 +312,12 @@ html,body{
 .tvLig:hover{
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 200px white;
-    cursor: url(/image/question2.png),auto;
+    cursor: url(../image/question2.png),auto;
 }
 .man{
     position: absolute;
     top: 50%; left: 40%;
-    cursor: url(/image/alert11.png),auto;
+    cursor: url(../image/alert11.png),auto;
     z-index: 999;
 }
 /* ---------------------------------------------------- */
@@ -359,7 +362,7 @@ html,body{
     outline: 0;
     position: absolute;
     top: 300px; left: 180px;
-    cursor: url(/image/alert11.png),auto;
+    cursor: url(../image/alert11.png),auto;
 }
 .retry:hover{
     box-shadow: 0 0 100px white;
