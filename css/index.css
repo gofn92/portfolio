@@ -1,4 +1,5 @@
 @charset "utf-8";
+/* ====================여기서부터 공통 스타일 시작=============================== */
 
 *{
     margin: 0;
@@ -117,7 +118,9 @@ html,body{
     top: 10px;
     transform: rotate(-45deg);
 }
-/* =================================================== */
+/* ====================여기까지 공통 스타일 끝=============================== */
+
+/* ====================여기서부터 #tuto 스타일 =============================== */
 .con1{
     width: 100%; height: 100%;
     position: relative;
@@ -159,7 +162,9 @@ html,body{
 .start:hover{
     box-shadow: 0 0 100px white;
 }
-/* ------------------------------------------------------------- */
+/* ====================여기까지 #tuto 스타일 =============================== */
+
+/* ====================여기서부터 #door 스타일 =============================== */
 #door{
     width: 100%; height: 100%;
     background: url(../image/bb.png);
@@ -286,7 +291,10 @@ html,body{
     color: rgba(255,255,255,0);
     transition: 0.5s;
 }
-/* ------------------------------------------------------------ */
+/* ====================여기까지 #door 스타일 =============================== */
+
+/* ====================여기서부터 #room1 스타일 =============================== */
+
 .con2{
     width: 100%; height: 100%;
     background: black;
@@ -311,7 +319,7 @@ html,body{
     cursor: url(../image/alert11.png),auto;
 }
 .hidden2.sup{
-    width: 70%; height: 70%;
+    width: 70%; height: 55%;
     position: absolute;
     left: 300px;
 }
@@ -337,6 +345,8 @@ html,body{
 .books:hover h2{
     opacity: 1;
 }
+
+
 .spec h2{
     text-align: center;
     color: black;
@@ -344,32 +354,55 @@ html,body{
     top: 50px; left: 50%;
     transform: translateX(-50%);
 }
+.spec .grap h3{
+    text-align: left;
+    color: black;
+    line-height: 50px;
+    position: absolute;
+    top: -10px; left: -100px;
+}
+
+.spec .grap .ill{
+    position: absolute;
+    top: 10px;
+}
 
 .spec .grap{
-    position: absolute;
-    top: 200px; right: 0;
-    color: black;
-    background: #ccc;
+    /* background: #ccc; */
     height: 40px; width: 90%;
     border-radius: 40px;
-}
-.spec .grap h3{
-    width: auto; height: auto;
-    position: absolute;
-    left: -80px; top: 10px;
+    margin: 0 0 50px;
+    position: relative;
+    top: 200px; left: 100px;
 }
 .spec .grap span{
     display: block;
     text-align: right;
-    height: 40px; width: 51%;
+    height: 40px;
     line-height: 40px; 
     background: red;
     border-radius: 40px;
-    animation: stack 2s ease 1s both; 
+}
+.spec.sup .stack1 span{
+    animation: stack1 2s 1 0.5s;
+}
+.spec.sup .stack2 span{
+    animation: stack2 2s 1 0.5s;
+}
+.spec.sup .stack3 span{
+    animation: stack3 2s 1 0.5s;
+}
+.spec.sup .stack4 span{
+    animation: stack4 2s 1 0.5s;
+}
+.spec.sup .stack5 span{
+    animation: stack4 2s 1 0.5s;
 }
 
-@keyframes stack{
+
+@keyframes stack1{
     0%{
+        display: block;
         width: 0;
         color: rgba(255,255,255,0);
     }
@@ -380,6 +413,58 @@ html,body{
         width: 51%;
     }
 }
+@keyframes stack2{
+    0%{
+        display: block;
+        width: 0;
+        color: rgba(255,255,255,0);
+    }
+    40%{
+        color: rgba(255,255,255,1);
+    }
+    100%{
+        width: 51%;
+    }
+}
+@keyframes stack3{
+    0%{
+        display: block;
+        width: 0;
+        color: rgba(255,255,255,0);
+    }
+    50%{
+        color: rgba(255,255,255,1);
+    }
+    100%{
+        width: 49%;
+    }
+}
+@keyframes stack4{
+    0%{
+        display: block;
+        width: 0;
+        color: rgba(255,255,255,0);
+    }
+    40%{
+        color: rgba(255,255,255,1);
+    }
+    100%{
+        width: 49%;
+    }
+}
+@keyframes stack5{
+    0%{
+        display: block;
+        width: 0;
+        color: rgba(255,255,255,0);
+    }
+    40%{
+        color: rgba(255,255,255,1);
+    }
+    100%{
+        width: 49%;
+    }
+}
 .spec .close-btn{
     position: absolute;
     top: 0;
@@ -387,7 +472,9 @@ html,body{
 .hidden2, .hidden3, .hidden4, .hidden5, .spec{
     transform-origin: 0 0;
     transform: scale(0);
-    transition: all 1s;
+    transition: transform 1s;
+    z-index: 999999999;
+    cursor: url(../image/question2.png),auto;
 }
 .con2 .hidden2 .project{
     width: 100%; height: 100%;
@@ -420,7 +507,10 @@ html,body{
     top: 60px; left: 480px;
     transform: scale(1);
 }
-/* ------------------------------------------------------------- */
+/* ====================여기까지 #room1 스타일 =============================== */
+
+/* ====================여기서부터 #room2 스타일 =============================== */
+
 .con3{
     width: 100%; height: 100%;
     position: relative;
@@ -474,7 +564,11 @@ html,body{
     top: 250px; right: 110px;
     cursor: url(../image/alert11.png),auto;
 }
-/* ------------------------------------------------------------- */
+/* ====================여기까지 #room2 스타일 =============================== */
+
+/* ====================여기서부터 #room3 스타일 =============================== */
+
+
 .con4{
     width: 100%; height: 100%;
     position: relative;
@@ -524,13 +618,55 @@ html,body{
     transform: translate(-55%,-50%);
     opacity: 0;
 }
+
+.hidden5{
+    width: 70%; height: 70%;
+    position: absolute;
+    left: 300px; top: 100px;
+    color: black;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.hidden5 h1{
+    text-align: center;
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translate(-50%);
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.hidden5 .close-btn{
+    position: absolute;
+    top: 0;
+}
+.hidden5.sup .intro-img{
+    width: 100%; height: 100%;
+}
+.hidden5.sup .intro-txt{
+    width: 100%; height: 100%;
+    background: url(/image/coffee2.jpg) no-repeat;
+    background-size: 80%;
+    background-position: bottom;
+}
+.hidden5.sup .intro-txt p{
+    position: absolute;
+    top: 20%;
+    transform: translateY(-20%);
+    text-align: center;
+    line-height: 30px;
+}
 .man:hover h2{
     font-size: 2rem;
     font-weight: bolder;
     opacity: 1;
     text-shadow: 0 0 10px white;
 }
-/* ---------------------------------------------------- */
+/* ====================여기까지 #room3 스타일 =============================== */
+
+/* ====================여기서부터 #end 스타일 =============================== */
+
 .con6{
     width: 100%; height: 100%;
     position: relative;
@@ -573,3 +709,4 @@ html,body{
 .retry:hover{
     box-shadow: 0 0 100px white;
 }
+/* ====================여기까지 #end 스타일 =============================== */
