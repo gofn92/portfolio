@@ -108,4 +108,11 @@ $(function(){
     $('.close-btn').click(function(){
         $('.hidden5').removeClass('sup');
     });    
+
+    $('.books').click(function(){
+        $('.spec').addClass('sup');
+    });
+    $('.close-btn').click(function(){
+        $('.spec').removeClass('sup');
+    });    
 });

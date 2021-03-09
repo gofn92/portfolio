@@ -8,18 +8,38 @@
 }
 html,body{
     width: 100%; height: 100%;
-    background: black;
+    /* background: black; */
     overflow: hidden;
     color: white;
     cursor: url(../image/Search\ icon\ 2.png),auto;
     position: relative;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
+}
+
+#maincontainer{
+    width: 100%; height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+}
+
+@keyframes change{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.change{
+    animation: change 1s ease-in;
 }
 .navmenu{
-    position: absolute;
+    width: 150px; height: auto;
+    position: fixed;
     top: 50%; left: 0;
     transform: translateY(-50%);
     color: white;
+    z-index: 999999999;
 }
 .navmenu ul{
     padding-left: 50px;
@@ -45,17 +65,26 @@ html,body{
     line-height: 1rem;
     font-weight: 600;
 }
+.navmenu ul li a:hover span{
+    color: white;
+    opacity: 1;
+}
+.navmenu ul li a span{
+    color: black;
+    opacity: 0;
+    font-weight: 900;
+}
 .navmenu ul li a::before{
     content: '';
     position: absolute;
-    background: white;
-    width: 10px; height: 10px;
-    left: -41px;
+    width: 40px; height: 45px;
+    left: -40px;
     top: 50%;
     transform: translateY(-50%);
-    border-radius: 50%;
+    /* border-radius: 50%;
     border: 3px solid white;
-    transition: background 0.25s;
+    transition: background 0.25s; */
+    background: url(../image/key1.png);
 }
 .navmenu ul li a.active{
     font-weight: 900;
@@ -70,6 +99,7 @@ html,body{
     position: absolute;
     right: 0;
     cursor: pointer;
+    z-index: 999999;
 }
 .close-btn .close{
     width: 40px; height: 8px;
@@ -97,11 +127,6 @@ html,body{
     line-height: 50px;
     background: black;
     z-index: 999999999999;
-}
-.con1 h1{
-    position: absolute;
-    top: 100px;
-    font-size: 50px;
 }
 .exp{
     width: 500px; height: 500px;
@@ -285,14 +310,112 @@ html,body{
     box-shadow: 0 0 200px white;
     cursor: url(../image/alert11.png),auto;
 }
-.hidden2, .hidden3, .hidden4, .hidden5{
+.hidden2.sup{
+    width: 70%; height: 70%;
+    position: absolute;
+    left: 300px;
+}
+.hidden2 img{
+    height: 100%; width: 100%;
+}
+.books{
+    width: 330px; height: 280px;
+    position: absolute;
+    top: 150px; right: 555px;
+    cursor: url(../image/alert11.png),auto;
+}
+.books h2{
+    opacity: 0;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-55%,-100%);
+    color: black;
+    font-size: 3rem;
+    font-style: italic;
+    text-shadow: 0 0 10px black;
+}
+.books:hover h2{
+    opacity: 1;
+}
+.spec h2{
+    text-align: center;
+    color: black;
+    position: absolute;
+    top: 50px; left: 50%;
+    transform: translateX(-50%);
+}
+
+.spec .grap{
+    position: absolute;
+    top: 200px; right: 0;
+    color: black;
+    background: #ccc;
+    height: 40px; width: 90%;
+    border-radius: 40px;
+}
+.spec .grap h3{
+    width: auto; height: auto;
+    position: absolute;
+    left: -80px; top: 10px;
+}
+.spec .grap span{
+    display: block;
+    text-align: right;
+    height: 40px; width: 51%;
+    line-height: 40px; 
+    background: red;
+    border-radius: 40px;
+    animation: stack 2s ease 1s both; 
+}
+
+@keyframes stack{
+    0%{
+        width: 0;
+        color: rgba(255,255,255,0);
+    }
+    40%{
+        color: rgba(255,255,255,1);
+    }
+    100%{
+        width: 51%;
+    }
+}
+.spec .close-btn{
+    position: absolute;
+    top: 0;
+}
+.hidden2, .hidden3, .hidden4, .hidden5, .spec{
     transform-origin: 0 0;
     transform: scale(0);
     transition: all 1s;
 }
+.con2 .hidden2 .project{
+    width: 100%; height: 100%;
+    display: flex;
+}
+.con2 .hidden2 .project .sub-pro{
+    width: 100px;
+    flex-grow: 1;
+    transition: all 0.5s;
+    text-align: center;
+    border-right: 5px solid black;
+    position: relative;
+}
+.con2 .hidden2 .project .sub-pro a{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+.con2 .hidden2 .project .sub-pro:hover{
+    flex-grow: 4;
+}
+
 .sup{
     width: 900px; height: 800px;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,1);
     position: absolute;
     top: 60px; left: 480px;
     transform: scale(1);
@@ -320,6 +443,30 @@ html,body{
     position: absolute;
     top: 440px; right: 640px;
     cursor: url(../image/alert11.png),auto;
+}
+.hidden3{
+    background: rgba(0,0,0,0.8);
+}
+.hidden3 h2{
+    color: white;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+.hidden3 .close-btn .close{
+    background: white;
+}
+.hidden4{
+    background: rgba(0,0,0,0.8);
+}
+.hidden4 h2{
+    color: white;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+.hidden4 .close-btn .close{
+    background: white;
 }
 .refe{
     width: 410px; height: 550px;
@@ -369,6 +516,19 @@ html,body{
     top: 50%; left: 40%;
     cursor: url(../image/alert11.png),auto;
     z-index: 999;
+    transition: all 0.5s;
+}
+.man h2{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-55%,-50%);
+    opacity: 0;
+}
+.man:hover h2{
+    font-size: 2rem;
+    font-weight: bolder;
+    opacity: 1;
+    text-shadow: 0 0 10px white;
 }
 /* ---------------------------------------------------- */
 .con6{
@@ -380,11 +540,7 @@ html,body{
     line-height: 50px;
     background: black;
 }
-.con6 h1{
-    position: absolute;
-    top: 100px;
-    font-size: 50px;
-}
+
 .exp1{
     width: 500px; height: 500px;
     position: absolute;
