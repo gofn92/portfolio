@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/common.css"> 
     <script src="js/main.js"></script>
     <title>index</title>
  </head>
@@ -18,13 +19,13 @@
                     <div class="ex-txt">
                         <h2>채혜석의 포트폴리오를 시작합니다.</h2>
                         <h2 style="color: red;">이용시 주의사항</h2>
-                        <ol>
+                        <ul>
                             <li>이미지에 마우스를 올려보세요!</li>
                             <li>마우스커서를 주목해주세요!</li>
                             <li>힌트는 어디에나 있습니다!</li>
-                        </ol>
+                        </ul>
                         <input type="button" value="Start" class="start" onclick="location.href = '#door'">
-                    
+                    </div>
                 </div>
             </div>
         </section>
@@ -33,9 +34,12 @@
                 <nav class="navmenu">
                     <ul>
                         <li><a href="#tuto" class="active"><span>Start</span></a></li>
-                        <li><a href="#room1"><span>room1</span></a></li>
-                        <li><a href="#room2"><span>room2</span></a></li>
-                        <li><a href="#room3"><span>room3</span></a></li>
+                        <li><a href="#door"><span>door</span></a></li>
+                        <li><a href="#room1"><span>library</span></a></li>
+                        <li><a href="#room2"><span>
+                            kitchen</span></a></li>
+                        <li><a href="#room3"><span>
+                            Livingroom</span></a></li>
                         <li><a href="#end"><span>end</span></a></li>
                     </ul>
                 </nav>
@@ -79,15 +83,6 @@
         </section>
         <section id="room1">
             <div class="con2">
-                <nav class="navmenu">
-                    <ul>
-                        <li><a href="#tuto" class="active"><span>Start</span></a></li>
-                        <li><a href="#room1"><span>room1</span></a></li>
-                        <li><a href="#room2"><span>room2</span></a></li>
-                        <li><a href="#room3"><span>room3</span></a></li>
-                        <li><a href="#end"><span>end</span></a></li>
-                    </ul>
-                </nav>
                 <div class="room-neunte">
                     <img src="image/Artboard.png" alt="">
                 </div>
@@ -119,7 +114,6 @@
                     </div>
                     <div class="grap stack5">
                         <h3 class="skil">PhotoShop</h3>
-                        <h3 class="ill">Illustrator</h3>
                         <span style="width: 49%;">49%</span>
                     </div>
                     <div class="close-btn">
@@ -135,15 +129,15 @@
                     <div class="project">
                         <div class="sub-pro pro1">
                             <img src="image/img1.png" alt="">
-                            <a href="https://gofn92.github.io/IndividualTask/" style="color: black;" target="_blank">project1</a>
+                            <a href="https://gofn92.github.io/IndividualTask/" style="color: black;" target="_blank">자기소개과제물</a>
                         </div>
                         <div class="sub-pro pro2">
                             <img src="image/img2.png" alt="">
-                            <a href="https://gofn92.github.io/GroupTask1/" style="color: white;" target="_blank">project2</a>
+                            <a href="https://gofn92.github.io/GroupTask1/" style="color: white;" target="_blank">자동차홍보페이지</a>
                         </div>
                         <div class="sub-pro pro3">
                             <img src="image/img3.png" alt="">
-                            <a href="https://gofn92.github.io/GroupTask2/" target="_blank" style="color: black;">project3</a>
+                            <a href="https://gofn92.github.io/GroupTask2/" target="_blank" style="color: black;">동물보호소페이지</a>
                         </div>
                     </div>
                 </div>
@@ -151,15 +145,6 @@
         </section>
         <section id="room2">
             <div class="con3">
-                <nav class="navmenu">
-                    <ul>
-                        <li><a href="#tuto" class="active"><span>Start</span></a></li>
-                        <li><a href="#room1"><span>room1</span></a></li>
-                        <li><a href="#room2"><span>room2</span></a></li>
-                        <li><a href="#room3"><span>room3</span></a></li>
-                        <li><a href="#end"><span>end</span></a></li>
-                    </ul>
-                </nav>
                 <div class="bg">
                     <img src="image/Artboard1.png" alt="">
                 </div>
@@ -186,15 +171,6 @@
         </section>
         <section id="room3">
             <div class="con4">
-                <nav class="navmenu">
-                    <ul>
-                        <li><a href="#tuto" class="active"><span>Start</span></a></li>
-                        <li><a href="#room1"><span>room1</span></a></li>
-                        <li><a href="#room2"><span>room2</span></a></li>
-                        <li><a href="#room3"><span>room3</span></a></li>
-                        <li><a href="#end"><span>end</span></a></li>
-                    </ul>
-                </nav>
                 <div class="bg2">
                     <img src="image/Artboard2.png" alt="">
                 </div>
@@ -218,8 +194,8 @@
                         <img src="image/me.jpg" alt="">
                     </div>
                     <div class="intro-txt">
+                        <strong>커피원두같은 남자가 되고싶은 채혜석입니다.</strong>
                         <p>
-                            <strong>커피원두같은 남자가 되고싶은 채혜석입니다.</strong> <br>
                             현대인들이 자주 마시는 커피는 그 종류도 다양하지만 커피원두가없다면 아무것도 만들 수 없게됩니다.
                             그러한 커피원두같이 없으면 안되는 그런 사람이 되기위해 노력하고 이뤄낼것입니다.
                         </p>
@@ -236,10 +212,8 @@
                 <img src="image/Artboard.png" alt="">
                 <div class="exp1">
                     <div class="ex-txt1">
-                        <h2>
-                            채혜석의 포트폴리오를 종료합니다. <br>
-                            감사합니다.
-                        </h2>
+                        <h2>채혜석의 포트폴리오를 종료합니다.</h2>
+                        <h2>감사합니다</h2>
                         <input type="button" value="ReTry" class="retry" onclick="location.href = '#tuto'">
                     </div>
                 </div>
