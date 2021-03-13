@@ -350,7 +350,7 @@
     top: 440px; right: 640px;
     cursor: url(../image/alert11.png),auto;
 }
-.hidden3{
+.hidden3.sup{
     background: rgba(0,0,0,0.8);
 }
 .hidden3 h2{
@@ -362,7 +362,7 @@
 .hidden3 .close-btn .close{
     background: white;
 }
-.hidden4{
+.hidden4.sup{
     background: rgba(0,0,0,0.8);
 }
 .hidden4 h2{
