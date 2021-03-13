@@ -12,8 +12,9 @@
 .exp{
     width: 500px; height: 500px;
     position: absolute;
-    top: 300px;
-    text-align: justify;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
 }
 .exp .ex-txt h2{
     font-size: 30px;
@@ -504,11 +505,12 @@
 .exp1{
     width: 500px; height: 500px;
     position: absolute;
-    top: 50%;
+    top: 55%; left: 50%;
+    transform: translate(-50%,-50%);
     text-align: center;
 }
-.exp1 .ex-txt h2{
-    font-size: 30px;
+.exp1 .ex-txt1 h2{
+    font-size: 2rem;
     font-weight: bolder;
 }
 .retry{
