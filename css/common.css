@@ -72,7 +72,7 @@ html,body{
     font-weight: 600;
 }
 .navmenu ul li a:hover span{
-    color: white;
+    color: black;
     opacity: 1;
 }
 .navmenu ul li a span{

@@ -9,11 +9,14 @@
     line-height: 50px;
     z-index: 999999999999;
 }
+.con1 img{
+    width: 1920px; height: 950px;
+}
 .exp{
     width: 500px; height: 500px;
     position: absolute;
     top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-30%);
     text-align: center;
 }
 .exp .ex-txt h2{
@@ -45,7 +48,7 @@
 /* ====================여기서부터 #door 스타일 =============================== */
 #door{
     width: 100%; height: 100%;
-    background: url(../image/bb.png);
+    background: url(../image/doors.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -62,9 +65,9 @@
 }
 .doorLock2{
     width: 20px; height: 40px;
-    background: white;
+    background: rgba(255,0,0,1);
     position: absolute;
-    left: 46%; top: 35%;
+    left: 46.5%; top: 38%;
     border-radius: 30px;
     animation: bb 1s infinite 2s;
     opacity: 0;
@@ -99,7 +102,7 @@
     border-radius: 50px;
     position: absolute;
     top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-70%);
     background: #222;
     overflow: hidden;
     cursor: pointer;
@@ -171,9 +174,13 @@
 }
 
 .desktop{
-    position: absolute;
-    left: 500px; top: 150px;
+    width: 100%; height: 920px;
+    /* position: absolute;
+    left: 500px; top: 150px; */
     cursor: url(../image/question2.png),auto;
+}
+.desktop img{
+    width: 100%; height: 100%;
 }
 .moniter{
     width: 280px; height: 180px;
@@ -339,10 +346,13 @@
 .kitchen{
     width: 100%; height: 100%;
     position: absolute;
-    top: 175px; left: 35%;    
+    /* top: 175px; left: 35%;     */
     perspective: 1000px;
     transform-style: preserve-3d;
     cursor: url(../image/question2.png),auto;
+}
+.kitchen img{
+    width: 100%; height: 100%;
 }
 .coffee{
     width: 170px; height: 180px;
@@ -389,6 +399,9 @@
     width: 100%; height: 100%;
     position: relative;
     background: black;
+}
+.con4 img{
+    width: 100%; height: 920px;
 }
 .sofa{
     position: absolute;
@@ -502,11 +515,14 @@
     background: black;
 }
 
+.con6 img{
+    width: 100%; height: 950px;
+}
 .exp1{
     width: 500px; height: 500px;
     position: absolute;
-    top: 55%; left: 50%;
-    transform: translate(-50%,-50%);
+    top: 50%; left: 50%;
+    transform: translate(-50%,-20%);
     text-align: center;
 }
 .exp1 .ex-txt1 h2{
