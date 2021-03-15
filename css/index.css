@@ -8,24 +8,25 @@
     align-items: center;
     line-height: 50px;
     z-index: 999999999999;
+    letter-spacing: 5px;
 }
 .con1 img{
-    width: 1920px; height: 950px;
+    width: 1920px; height: 970px;
 }
 .exp{
-    width: 500px; height: 500px;
+    width: 750px; height: 650px;
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-30%);
     text-align: center;
 }
 .exp .ex-txt h2{
-    font-size: 30px;
+    font-size: 2.5rem;
     font-weight: bolder;
+    line-height: 70px;
 }
 .exp .ex-txt ul{
-    font-size: 20px;
-    list-style: none;
+    font-size: 22px;
 }
 .start{
     padding: 10px;
@@ -36,7 +37,7 @@
     color: white;
     outline: 0;
     position: absolute;
-    top: 300px; left: 50%;
+    top: 320px; left: 50%;
     transform: translate(-50%);
     cursor: url(../image/alert11.png),auto;
 }
@@ -122,7 +123,7 @@
 }
 .hidden td{
     width: 100px; height: 100px;
-    color: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,1);
 }
 .hidden .deco{
     width: 100%; height: 100px;
@@ -174,13 +175,13 @@
 }
 
 .desktop{
-    width: 100%; height: 920px;
+    width: 100%; height: 970px;
     /* position: absolute;
     left: 500px; top: 150px; */
     cursor: url(../image/question2.png),auto;
 }
 .desktop img{
-    width: 100%; height: 100%;
+    width: 100%; height: 970px;
 }
 .moniter{
     width: 280px; height: 180px;
@@ -401,7 +402,7 @@
     background: black;
 }
 .con4 img{
-    width: 100%; height: 920px;
+    width: 100%; height: 970px;
 }
 .sofa{
     position: absolute;
@@ -421,7 +422,7 @@
     transform: translateX(100px) rotateY(20deg); 
     cursor: url(../image/question2.png),auto;
 }
-.tvLig{
+/* .tvLig{
     border: 1px solid white;
     width: 200px; height: 320px;
     position: absolute;
@@ -433,7 +434,7 @@
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 200px white;
     cursor: url(../image/question2.png),auto;
-}
+} */
 .man{
     position: absolute;
     top: 50%; left: 40%;
@@ -513,13 +514,14 @@
     align-items: center;
     line-height: 50px;
     background: black;
+    letter-spacing: 5px;
 }
 
 .con6 img{
-    width: 100%; height: 950px;
+    width: 100%; height: 970px;
 }
 .exp1{
-    width: 500px; height: 500px;
+    width: 650px; height: 500px;
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-20%);
@@ -541,6 +543,7 @@
     cursor: url(../image/alert11.png),auto;
 }
 .retry:hover{
-    box-shadow: 0 0 100px white;
+    box-shadow: 0 0 150px white;
+    background: black;
 }
 /* ====================여기까지 #end 스타일 =============================== */

@@ -17,7 +17,7 @@ $(function(){
             pass3 = false;
             pass4 = false;
             alert("땡");
-            $("td").css("color","rgba(255,255,255,0.1)");
+            $("td").css("color","rgba(255,255,255,1)");
             //비밀번호 틀렸을때 사용할 함수
         }
 
