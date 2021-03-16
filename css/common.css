@@ -78,7 +78,7 @@ html,body{
     font-weight: 600;
 }
 .navmenu ul li a:hover span{
-    color: black;
+    color: white;
     opacity: 1;
 }
 .navmenu ul li a span{
@@ -141,7 +141,7 @@ html,body{
 }
 
 
-.desktop::before{
+/* .desktop::before{
     content: '';
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
@@ -171,5 +171,5 @@ html,body{
     top: 0; left: 0; bottom: 0; right: 0;
     background: rgba(0,0,0,0.8);
     width: 100%; height: 970px;
-}
+} */
 /* ====================여기까지 공통 스타일 끝=============================== */

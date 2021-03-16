@@ -114,5 +114,18 @@ $(function(){
     });
     $('.close-btn').click(function(){
         $('.spec').removeClass('sup');
-    });    
+    }); 
+
+
+    $('.desktop').click(function(){
+        alert("주위를 살펴보자!");
+    });
+
+    $('.kitchen').click(function(){
+        alert("주위를 살펴보자!");
+    });
+
+    $('.livingroom').click(function(){
+        alert("주위를 살펴보자!");
+    });
 });
