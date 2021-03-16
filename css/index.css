@@ -175,14 +175,14 @@
 }
 
 .desktop{
-    width: 100%; height: 970px;
-    /* position: absolute;
-    left: 500px; top: 150px; */
+    width: 100%; height: 100%;
+    position: absolute;
+    left: 500px; top: 150px;
     cursor: url(../image/question2.png),auto;
 }
-.desktop img{
+/* .desktop img{
     width: 100%; height: 970px;
-}
+} */
 .moniter{
     width: 280px; height: 180px;
     border: 1px solid white;
@@ -347,14 +347,14 @@
 .kitchen{
     width: 100%; height: 100%;
     position: absolute;
-    /* top: 175px; left: 35%;     */
+    top: 175px; left: 35%;    
     perspective: 1000px;
     transform-style: preserve-3d;
     cursor: url(../image/question2.png),auto;
 }
-.kitchen img{
+/* .kitchen img{
     width: 100%; height: 100%;
-}
+} */
 .coffee{
     width: 170px; height: 180px;
     position: absolute;
@@ -401,9 +401,9 @@
     position: relative;
     background: black;
 }
-.con4 img{
+/* .con4 img{
     width: 100%; height: 970px;
-}
+} */
 .sofa{
     position: absolute;
     bottom: 200px; right: 0;
@@ -422,7 +422,7 @@
     transform: translateX(100px) rotateY(20deg); 
     cursor: url(../image/question2.png),auto;
 }
-/* .tvLig{
+.tvLig{
     border: 1px solid white;
     width: 200px; height: 320px;
     position: absolute;
@@ -434,7 +434,7 @@
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 200px white;
     cursor: url(../image/question2.png),auto;
-} */
+}
 .man{
     position: absolute;
     top: 50%; left: 40%;
@@ -457,7 +457,7 @@
 }
 
 .hidden5{
-    width: 70%; height: 70%;
+    width: 100%; height: 70%;
     position: absolute;
     left: 300px; top: 100px;
     color: black;
@@ -475,12 +475,12 @@
 }
 
 .hidden5.sup .intro-img{
-    width: 100%; height: 100%;
+    width: 400px; height: 800px;
 }
 .hidden5.sup .intro-txt{
     width: 100%; height: 100%;
     background: url(../image/coffee2.jpg) no-repeat;
-    background-size: 80%;
+    background-size: 50%;
     background-position: bottom;
 }
 .hidden5.sup .intro-txt strong{
@@ -488,11 +488,11 @@
     font-weight: bolder;
     text-align: center;
     position: absolute;
-    top: 15%; right: 5%;
+    top: 42%; right: 5%;
 }
 .hidden5.sup .intro-txt p{
     position: absolute;
-    top: 25%;
+    top: 50%;
     transform: translateY(-20%);
     text-align: center;
     line-height: 20px;
